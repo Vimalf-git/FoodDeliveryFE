@@ -1,0 +1,14 @@
+.homepage{
+    width: 100%;
+    height: auto;
+    /* background-color: aqua; */
+}
+.cardPlace{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}

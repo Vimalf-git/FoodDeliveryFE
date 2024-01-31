@@ -1,0 +1,90 @@
+.landNav{
+    width: 100%;
+    height: 4em;
+    box-shadow: 0 0 1rem 0 rgb(225, 223, 223);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0%;
+    z-index: 1;
+    background-color: #ffff;
+}
+.landnav-l-con{
+    width: 40%;
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+.menubar>a{
+text-decoration: none;
+color: rgb(99, 100, 101);
+}
+.landnav-r-con{
+    width: 40%;
+    /* margin-right: 2rem; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+.logoutbtn{
+    background-color:#F4424E;
+    border-radius: 4em !important;
+}
+.cartCon{
+    position: relative;
+    width: 4em;
+    /* background-color: aqua; */
+}
+.carticon{
+    font-size: 2.5em !important;
+    cursor: pointer;
+    /* position: relative; */
+}
+.countCart{
+    position: absolute;
+    color:#ffff;
+    top: -.2em;
+    right: .2em;
+    background-color: rgb(41, 195, 41);
+    width: 2em;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: .8s;
+    font-size: 1em;
+    font-weight: 700;
+    /* right: 2em; */
+    /* background-color: aqua; */
+}
+.searchCon{
+    width: 15rem;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-radius: 4em;
+    background-color: red !important; */
+}
+
+.searchBar{
+    /* background-color: #F4424E; */
+    height: 3em;
+    width: 15em;
+    border-radius: 4rem;
+    color:rgb(107, 96, 96) !important;
+    text-indent: 1rem;
+    /* border-color: #F4424E; */
+    outline-color: #F4424E;
+}
+.searchBar::placeholder{
+    color: #F4424E !important;
+}
+.searchBar:focus{
+    /* outline: none; */
+    /* border: none; */
+    
+  }

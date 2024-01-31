@@ -1,0 +1,44 @@
+.cardBox{
+    width: 18em;
+    height: 18em;
+    margin-top: 1rem;
+    border-radius: 8px;
+    box-shadow: 0  1.5rem 2rem rgb(0, 0, 0,.1);
+    background-color: rgb(190, 186, 186);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.imgcon{
+    width: 5rem;
+    height: 5rem;
+    /* background-color: aqua; */
+}
+.cardimg{
+    width: 5rem;
+    height: 5rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+.cardBox:hover{
+    background-color: #fff;
+    transition: 1s;
+}
+.addtocartCon{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.addtocartbtn{
+    background-color: #F4424E !important;
+    color: #fff !important;
+    width: 80%;
+    border-radius: 4em !important;
+}
+.addtocartbtn:hover{
+    background-color: #F4424E;
+    color: #fff;
+    width: 80%;
+}
