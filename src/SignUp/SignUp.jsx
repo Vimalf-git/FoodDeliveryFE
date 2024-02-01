@@ -68,7 +68,7 @@ function Signup() {
                             email: '',
                             contact: '',
                             password: '',
-                            admin: ''
+                            admin: false
                         }}
                         onSubmit={(value) => {
                             submitData(value)
@@ -117,7 +117,7 @@ function Signup() {
                                     }}
                                 />
                                 <div className='adminCheckBox'>
-                                <FormControlLabel control={<Checkbox defaultChecked />} label="create admin" />
+                                <FormControlLabel control={<Checkbox value={true} name='admin' onChange={handleChange} />} label="create admin" />
                                 </div>
                                 <Button sx={{ m: 1, width: '34ch', backgroundColor: "#F4424E" }}
 

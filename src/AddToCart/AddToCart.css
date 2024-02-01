@@ -1,0 +1,119 @@
+
+.addtocart{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+}
+.heading{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F4424E;
+}
+.addtocartsec-2{
+    width: 100%;
+    display: flex;
+}
+.addTocartSec{
+    width: 50%;
+    height: 80vh;
+    /* background-color: #fff; */
+    display: flex;
+    /* gap: 1rem; */
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+
+}
+.addcarrtbox{
+    width:30rem;
+    height: 7rem;
+    /* border-radius: 2em; */
+    display: flex;
+    background-color: #fff;
+    border-bottom: 1px solid black;
+}
+.addcarrtbox-l{
+    width: 20rem;
+    height: 8rem;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 1rem;
+    /* background-color:black; */
+
+}
+.cartImg{
+    width: 4rem;
+    height: 4rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+.addcarrtbox-r{
+    width: 10rem;
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+/* background-color: aqua; */
+}
+
+.deleteCon{
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    background-color: #fff;
+    border: 1px solid rgb(171, 165, 165);
+    cursor: pointer;
+}
+.aountTotCon{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.amountCon{
+    width: 10rem;
+    /* background-color: aqua; */
+    text-align: right;
+    font-size: 1rem;
+    font-weight: 700;
+    /* border-bottom: 1px solid black; */
+}
+.amountname{
+    width: 5rem;
+    text-align: left;
+}
+.amountsec{
+    width: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 1rem;
+    /* background-color: blueviolet; */
+}
+.checkoutCon{
+    width: 30rem;
+    height: 25rem;
+    background-color: rgb(237, 233, 233);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.paybtn{
+    margin: 1px;
+    width: 30ch !important;
+    border-radius: 1em !important;
+    background-color: #F4424E !important;
+    color: #fff !important;
+}

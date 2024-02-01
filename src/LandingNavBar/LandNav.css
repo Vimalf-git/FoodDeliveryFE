@@ -88,3 +88,10 @@ color: rgb(99, 100, 101);
     /* border: none; */
     
   }
+  .menubar{
+    display: flex;
+    gap: 1rem;
+  }
+  .adminLink{
+    display: none;
+  }

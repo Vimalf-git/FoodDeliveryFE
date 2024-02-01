@@ -4,6 +4,7 @@ import { Button } from '@mui/material'
 import Login from '../Login/Login';
 import {LoginDataCon} from '../Context/LoginContext'
 import Signup from '../SignUp/SignUp';
+import ForgotPass from '../ForgotPassword/ForgotPass';
 const LandingPage = () => {
     // const[loginTog,setLoginTog]=useState(false);
     const {loginTog,setLoginTog,
@@ -22,7 +23,7 @@ const LandingPage = () => {
                 <Button disabled={loginTog?true:false} onClick={()=>setSignUp(pre=>!pre)}>sign up</Button>
             </nav>
             <div className='brandName'>
-                <h3>ORHOT-APP</h3>
+                <h3>ORDER-APP</h3>
                 <p>
                 Find the best restaurants, cafés and bars in India
                 </p>
@@ -30,6 +31,8 @@ const LandingPage = () => {
             <div className={loginTog||signUp?'loginSection':''}>
                 {loginTog ?<Login/>:<></>}
                 {signUp?<Signup/>:<></>}
+                {/* {forgot?<ForgotPass/>:<></>} */}
+
             </div>
         </div>
     )

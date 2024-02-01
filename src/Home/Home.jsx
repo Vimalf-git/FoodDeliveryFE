@@ -1,23 +1,29 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './Home.css'
 import Card from '../Card/Card'
 import { cardConData } from '../Context/CardContext'
+import { MenuList } from '@mui/material'
+import { useNavigate } from 'react-router-dom'
 const Home = () => {
 
-  const{data,setData}=useContext(cardConData);
-
-
-
+  const { data, adminOrNot } = useContext(cardConData);
+  console.log(data);
+  const navigate=useNavigate()
   return (
-  <div className='homepage'>
 
-    <div className='cardPlace'>
-      {data&&data.map((e,i) => {
-        return <Card data={e} key={i} />
-      })}
 
+    <div className='homepage'>
+
+      {adminOrNot}
+      {adminOrNot ==true? navigate('/mymenulist')
+        : 
+        <div className='cardPlace'>
+          {data && data.map((e, i) => {
+            return <Card data={e} key={i} />
+          })}
+        </div>
+         } 
     </div>
-  </div>
   )
 }
 

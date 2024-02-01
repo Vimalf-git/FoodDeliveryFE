@@ -19,9 +19,11 @@ function Login() {
         // e.preventDefault();
         try {
             const res = await ApiService.post('/login', value)
+            console.log(res.data);
             if (res.status == 200) {
                 toast.success("login success")
                 sessionStorage.setItem('token', res.data.token)
+                
                 navigate('/home')
             }
         } catch (error) {
@@ -108,7 +110,7 @@ function Login() {
                                 <p>Password:-vimal</p>
                             </div>
                             <div className='for-crt-link mb-3'>
-                                <Link style={{ textDecoration: 'none', color: '#4481eb' }} to='/forgetpassword'>Forget password?</Link>
+                                <Link style={{ textDecoration: 'none', color: '#4481eb' }} to='/forgotPass'>Forget password?</Link>
                                 {/* <Link style={{ textDecoration: 'none', color: '#4481eb' }} to='/signup'>New to Here?</Link> */}
                             </div>
                             <div className="d-grid">

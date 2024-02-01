@@ -1,0 +1,41 @@
+.addFood{
+width: 100%;
+height: 88vh;
+display: flex;
+justify-content: center;
+align-items: center;
+/* background-color: aqua; */
+}
+.addFood-l{
+    width: 20%;
+    height: 80vh;
+    margin-left: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    /* background-color: blue; */
+}
+.addfoodCon{
+    width: 8rem;
+    height: 8rem;
+    margin-top: 1rem;
+    
+    /* background-color: red; */
+}
+.imgIconaddfood{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5em !important;
+    height: 5em !important;
+}
+.addFood-r{
+    height: 80vh;
+    /* background-color: aqua; */
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}

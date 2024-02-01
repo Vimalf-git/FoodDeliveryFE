@@ -42,3 +42,21 @@
     color: #fff;
     width: 80%;
 }
+.cardDesc{
+    display: flex;
+    justify-content: center;
+}
+.cardDesc>p{
+    /* background-color: aqua; */
+    text-align: center;
+}
+.admineditdeletebtn{
+    width:100%;
+    display: flex;
+    /* background-color: #F4424E; */
+    justify-content: space-around;
+}
+.admindeletebtn{
+    color: #fff !important;
+    background-color: #F4424E !important;
+}
