@@ -27,7 +27,6 @@ function Signup() {
     };
     const submitData = async (value) => {
         try {
-            console.log(value);
             const res = await ApiService.post('/createuser', value);
             if (res.status === 201) {
                 toast.success('successfully account created')
@@ -35,7 +34,6 @@ function Signup() {
                 setLoginTog(pre => !pre)
             }
         } catch (error) {
-            console.log(error);
             if (error.response.data.status === 400) {
                 toast.error('User already exist')
             } else {

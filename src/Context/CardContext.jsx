@@ -18,7 +18,6 @@ const CardContext = ({ children }) => {
   const getData = async () => {
     try {
       const res = await ApiService.get('/getfooddata');
-      console.log(res.data);
       if (res.status == 200) {
         setData(res.data.fooddetail)
         setFillsample(res.data.fooddetail)
@@ -42,7 +41,6 @@ const CardContext = ({ children }) => {
     const filterd =
 
       filsample.filter((e) => e.foodName.toLowerCase().includes(value));
-    // console.log(filterd);
     setData(filterd);
   }
 
@@ -60,7 +58,6 @@ const CardContext = ({ children }) => {
 
 
   const AddTOCart = async (data) => {
-    console.log(data);
     let updatedata = [...addToCartData];
       updatedata.push(data)
       setCountCart(updatedata.length)
@@ -75,7 +72,6 @@ const CardContext = ({ children }) => {
   }
 
   const deleteAddCart = async (value, index) => {
-    console.log('delte');
     let deleteData = [...addToCartData];
     deleteData.splice(index, 1);
     setAddToCartData(deleteData);
@@ -94,7 +90,6 @@ if(res.status==200){
   
 
 const deleteFood=async(id,i)=>{
-  console.log('enter' + id, i);
   const deleteVal=[...data];
   deleteVal.splice(i,1);
   setData(deleteVal);

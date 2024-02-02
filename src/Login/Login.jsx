@@ -12,14 +12,10 @@ import * as Yup from 'yup'
 function Login() {
     const { loginTog, setLoginTog
     } = useContext(LoginDataCon)
-    const [email, setMail] = useState("")
-    const [password, setPassword] = useState("");
     const navigate = useNavigate();
     const loginVerify = async (value) => {
-        // e.preventDefault();
         try {
             const res = await ApiService.post('/login', value)
-            console.log(res.data);
             if (res.status == 200) {
                 toast.success("login success")
                 sessionStorage.setItem('token', res.data.token)
@@ -66,7 +62,6 @@ function Login() {
                         password: ''
                     }}
                     onSubmit={(value) => {
-                        console.log(value);
                         loginVerify(value)
                     }}
                     validationSchema={scheme}

@@ -8,9 +8,9 @@ const MymenuList = () => {
     // const adminfoodMenu=
   return (
     <div className='menulist'>
-        {data.filter((e)=>e.mail==email).map((e,i)=>{
+        {data.length>0?data.filter((e)=>e.mail==email).map((e,i)=>{
             return <Card data={e} key={i}/>
-        })}
+        }):<div className='nofood'>No Food here..</div>}
     </div>
   )
 }

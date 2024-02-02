@@ -6,7 +6,6 @@ const ApiService=axios.create({
         "Content-Type":"application/json"
     }
 })
-console.log('apiservice');
 ApiService.interceptors.request.use((config)=>{
     const token= sessionStorage.getItem('token');
     if(token){

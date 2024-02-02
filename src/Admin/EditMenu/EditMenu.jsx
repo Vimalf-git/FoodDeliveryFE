@@ -22,11 +22,7 @@ let params=useParams()
         price: initialValues.price,
         quantity: initialValues.quantity
     }
-    console.log(initialValues);
-    console.log(obj);
-    console.log(email);
     const submitData = async (value) => {
-        console.log(value);
         try {
             let formData = new FormData();
             formData.append('id',params.id)
@@ -57,7 +53,6 @@ let params=useParams()
     }
     const getAdminEditData=async(id)=>{
         try {
-            console.log(id);
            let res=await ApiService.get(`/editData/${id}`)
 
            setInitialvalue(res.data.editData)
@@ -91,7 +86,6 @@ let params=useParams()
                     enableReinitialize={true}
                     initialValues={initialValues}
                     onSubmit={(value) => {
-                        console.log(value);
                         submitData(value)
                     }}
 

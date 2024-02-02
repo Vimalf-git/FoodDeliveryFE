@@ -17,7 +17,6 @@ const AddToCart = () => {
             return parseInt(acc) + parseInt(cur.price)
         }, 0);
         deliveryAmount=5;
-        console.log(totalAmount);
 
     }
     const [Product,setProduct]=useState([])
@@ -29,7 +28,6 @@ const AddToCart = () => {
         
     }
     const payment=async(token)=>{
-        console.log("payment module");
         const body={
             token,
             addToCartData,
@@ -66,7 +64,6 @@ const AddToCart = () => {
     // let pay=new window.Razorpay(option)
     // pay.open()
 
-    console.log(addToCartData);
     useEffect(()=>{
         getCartData();
         getProducts();

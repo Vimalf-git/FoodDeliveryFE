@@ -7,7 +7,6 @@ const Orders = () => {
     useEffect(()=>{
 getOrderData()
     },[orders])
-    console.log(orders);
   return (
     <div className='orderscom'>
         <div className='orderCardCom'>

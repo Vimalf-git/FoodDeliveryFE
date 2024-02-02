@@ -9,7 +9,6 @@ import { toast } from 'react-toastify';
 const AddFood = () => {
     const [postimageUpload, setPostImageUpload] = useState({});
     const{email}=useContext(cardConData)
-    console.log(email);
 const submitData=async(value)=>{
 try {
     let formData=new FormData();
@@ -60,7 +59,6 @@ try {
                         veg:false
                     }}
                     onSubmit={(value) => {
-                        console.log(value);
                         submitData(value)
                     }}
                 // validationSchema={scheme}
