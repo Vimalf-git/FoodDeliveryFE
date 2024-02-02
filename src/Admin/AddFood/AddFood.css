@@ -2,7 +2,7 @@
 width: 100%;
 height: 88vh;
 display: flex;
-justify-content: center;
+justify-content: space-around;
 align-items: center;
 /* background-color: aqua; */
 }
@@ -29,6 +29,7 @@ align-items: center;
     align-items: center;
     width: 5em !important;
     height: 5em !important;
+    cursor: pointer;
 }
 .addFood-r{
     height: 80vh;
@@ -37,5 +38,24 @@ align-items: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 0;
     
+}
+
+@media(max-width:426px){
+    .addFood{
+        width: 770px;
+    }
+}
+@media(max-width:376px){
+    .addFood{
+        width: 770px;
+        /* background-color: red; */
+    }
+}
+@media(max-width:321px){
+    .addFood{
+        width: 770px;
+        /* background-color: red; */
+    }
 }

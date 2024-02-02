@@ -60,3 +60,14 @@
     color: #fff !important;
     background-color: #F4424E !important;
 }
+.admineditbtn{
+    width:5rem ;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    gap: .2rem;
+    align-items: center;
+    border-radius: 6px;
+    color: #fff !important;
+    background-color: rgb(71, 71, 209);
+}

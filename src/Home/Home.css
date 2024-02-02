@@ -12,9 +12,21 @@
     align-items: center;
     margin-bottom: 2rem;
 }
-
+@media(max-width:426px){
+    .homepage{
+        width: 770px;
+        /* background-color: red; */
+    }
+}
+@media(max-width:376px){
+    .homepage{
+        width: 770px;
+        /* background-color: red; */
+    }
+}
 @media(max-width:321px){
     .homepage{
-        background-color: red;
+        width: 770px;
+        /* background-color: red; */
     }
 }

@@ -7,3 +7,22 @@
  gap: 1rem;
  justify-content: center;
 }
+
+@media(max-width:426px){
+    .menulist{
+        width: 770px;
+        /* background-color: red; */
+    }
+}
+@media(max-width:376px){
+    .menulist{
+        width: 770px;
+        /* background-color: red; */
+    }
+}
+@media(max-width:321px){
+    .menulist{
+        width: 770px;
+        /* background-color: red; */
+    }
+}

@@ -38,3 +38,23 @@
     background-color: rgb(53, 195, 53) !important;
     color: #fff !important;
 }
+
+
+@media(max-width:426px){
+    .orderscom{
+        width: 770px;
+        /* background-color: red; */
+    }
+}
+@media(max-width:376px){
+    .orderscom{
+        width: 770px;
+        /* background-color: red; */
+    }
+}
+@media(max-width:321px){
+    .orderscom{
+        width: 770px;
+        /* background-color: red; */
+    }
+}

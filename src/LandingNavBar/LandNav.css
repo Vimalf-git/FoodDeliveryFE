@@ -155,18 +155,19 @@
         }
 }
 
-/* @media(max-width:376px) {
+@media(max-width:426px) {
     .landNav {
         display: none;
     }
 
     .landNavmob {
         display: flex;
-        width: 376px;
+        width: 770px;
         height: 4rem;
         justify-content: space-around;
         align-items: center;
         background-color: #F4424E;
+
     }
 
     .burgerIcon {
@@ -184,16 +185,16 @@
         width: 20rem;
         height: 20rem;
         background-color: rgb(241, 247, 247);
-        right:0rem;
+        right: -21.5rem;
         top: 4rem;
         z-index: 1;
         display: flex;
         flex-direction: column;
         /* gap: 1em; */
-        /* justify-content: space-around;
-        align-items: center; */
-    /* } */
-/*.menuMob{
+        justify-content: space-around;
+        align-items: center;
+    }
+.menuMob{
     width: 20rem;
     height: 10rem;
     display: flex;
@@ -201,16 +202,69 @@
     align-items: center;
     justify-content: space-around;
     /* background-color: #F4424E; */
-/* } */
-   /*  .menuMob>a {
+}
+     .menuMob>a {
         text-decoration: none;
         } 
         .adminmobmenu>a{
             text-decoration: none;
         }
-} */
+}
+@media(max-width:376px) {
+    .landNav {
+        display: none;
+    }
 
+    .landNavmob {
+        display: flex;
+        width: 770px;
+        height: 4rem;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #F4424E;
 
+    }
+
+    .burgerIcon {
+        z-index: 1 !important;
+        position: relative;
+        right: 1.5rem;
+        color: #fff;
+        width: 2rem;
+        height: 3rem;
+        z-index: 1;
+    }
+
+    .landnav-r-conMob {
+        position: absolute;
+        width: 20rem;
+        height: 20rem;
+        background-color: rgb(241, 247, 247);
+        right: -24.5rem;
+        top: 4rem;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        /* gap: 1em; */
+        justify-content: space-around;
+        align-items: center;
+    }
+.menuMob{
+    width: 20rem;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    /* background-color: #F4424E; */
+}
+     .menuMob>a {
+        text-decoration: none;
+        } 
+        .adminmobmenu>a{
+            text-decoration: none;
+        }
+}
 @media(max-width:321px) {
     .landNav {
         display: none;

@@ -4,6 +4,7 @@
     height: auto;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     /* background-color: red; */
 }
 .heading{
@@ -17,6 +18,8 @@
 .addtocartsec-2{
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .addTocartSec{
     width: 50%;
@@ -123,7 +126,18 @@
         z-index: 0;
     }
 }
-
+@media(max-width:426px){
+    .addtocart{
+        width: 770px;
+        /* background-color: red; */
+    }
+}
+@media(max-width:376px){
+    .addtocart{
+        width: 770px;
+        /* background-color: red; */
+    }
+}
 @media(max-width:321px){
     .addtocart{
         width: 770px;
