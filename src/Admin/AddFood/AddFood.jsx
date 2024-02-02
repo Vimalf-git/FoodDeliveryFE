@@ -6,9 +6,11 @@ import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
 import ApiService from '../../Common/ApiService';
 import { cardConData } from '../../Context/CardContext';
 import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 const AddFood = () => {
     const [postimageUpload, setPostImageUpload] = useState({});
-    const{email}=useContext(cardConData)
+    const{email,getData}=useContext(cardConData)
+    const navigate=useNavigate()
 const submitData=async(value)=>{
 try {
     let formData=new FormData();
@@ -26,8 +28,15 @@ try {
         }
     });
     if(res.status==200){
-        toast.success('food added')
-    }else{
+        // toast.success('food added')
+        getData();
+        navigate('/mymenulist')
+        
+    }else if(res.status==400){
+        console.log('hiiii');
+        toast.error(res.data.message)
+    }
+    else{
         toast.error('failed..!')
     }
 } catch (error) {

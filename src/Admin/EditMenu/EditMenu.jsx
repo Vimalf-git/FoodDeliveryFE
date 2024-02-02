@@ -77,9 +77,9 @@ let params=useParams()
                     <AddPhotoAlternateIcon className='imgIconaddfood' />
                     <img src='' />
                 </div>
-                <div>
+                {/* <div>
                     <Button variant='outlined'>Change</Button>
-                </div>
+                </div> */}
             </div >
             <div className='addFood-r'>
                 <Formik
