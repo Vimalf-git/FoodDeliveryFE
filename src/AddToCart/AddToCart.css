@@ -117,3 +117,16 @@
     background-color: #F4424E !important;
     color: #fff !important;
 }
+
+@media(max-width:789px){
+    .checkoutCon{
+        z-index: 0;
+    }
+}
+
+@media(max-width:321px){
+    .addtocart{
+        width: 770px;
+        /* background-color: red; */
+    }
+}

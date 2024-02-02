@@ -13,6 +13,7 @@ const CardContext = ({ children }) => {
   const [data, setData] = useState([]);
   const [filsample, setFillsample] = useState([]);
   const [addToCartData, setAddToCartData] = useState([]);
+  const[orders,setorders]=useState([]);
 
   const getData = async () => {
     try {
@@ -45,15 +46,27 @@ const CardContext = ({ children }) => {
     setData(filterd);
   }
 
+  const getCartData=async()=>{
+    try {
+      let token = sessionStorage.getItem('token');
+      setEmail(jwtDecode(token).email)
+      let cart = await ApiService.get(`/getcartdata/${email}`);
+      setAddToCartData(cart.data.cartRes)
+      setCountCart(cart.data.cartRes.length)
+    } catch (error) {
+      
+    }
+  }
+
 
   const AddTOCart = async (data) => {
-    // console.log(data);
+    console.log(data);
     let updatedata = [...addToCartData];
       updatedata.push(data)
+      setCountCart(updatedata.length)
       setAddToCartData(updatedata);
-      setCountCart(addToCartData.length)
     try {
-      data.mail = email;
+      data.OrderBy = email;
       await ApiService.post('/savcart', data)
       getCartData()
     } catch (error) {
@@ -78,19 +91,7 @@ if(res.status==200){
 }
   }
 
-  const getCartData=async()=>{
-    try {
-      let token = sessionStorage.getItem('token');
-      setEmail(jwtDecode(token).email)
-      let cart = await ApiService.get(`/getcartdata/${email}`);
-      // console.log(cart.data);
-      setAddToCartData(cart.data.cartRes)
-      setCountCart(cart.data.cartRes.length)
-      
-    } catch (error) {
-      
-    }
-  }
+  
 
 const deleteFood=async(id,i)=>{
   console.log('enter' + id, i);
@@ -107,6 +108,19 @@ const deleteFood=async(id,i)=>{
   }
 }
 
+const getOrderData=async()=>{
+try {
+  // let token = sessionStorage.getItem('token');
+  // setEmail(jwtDecode(token).email)
+  let res= await ApiService.get(`/getallorder/${email}`)
+  if(res.status==200){
+    setorders(res.data.orders)
+  }
+} catch (error) {
+  
+}
+}
+
   useEffect(() => {
     let token = sessionStorage.getItem('token');
     setUserName(jwtDecode(token).username)
@@ -114,12 +128,13 @@ const deleteFood=async(id,i)=>{
     setEmail(jwtDecode(token).email)
     getData();
     getCartData();
+    getOrderData();
   }, [])
 
   return (
     <cardConData.Provider value={{
       email, AddTOCart, addToCartData, deleteAddCart,getCartData,
-      userName, setAdminOrNot, adminOrNot,
+      userName, setAdminOrNot, adminOrNot,orders,setorders,getOrderData,
       countCart, setCountCart,getData,
       searchText, setSearchText, data, setData, filterData,deleteFood
     }}>

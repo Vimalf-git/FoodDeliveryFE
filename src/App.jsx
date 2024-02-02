@@ -11,6 +11,7 @@ import MymenuList from './Admin/MyMenuList/MymenuList'
 import EditMenu from './Admin/EditMenu/EditMenu'
 import ForgotPass from './ForgotPassword/ForgotPass'
 import ResetPassword from './ResetPassword/ResetPassword'
+import Orders from './Admin/Orders/Orders'
 
 function App() {
 
@@ -34,7 +35,7 @@ function App() {
         <Route path='/editfood/:id' element={<CardContext><LandNavBar/><EditMenu/></CardContext>}/>
         <Route path='/forgotPass' element={<><ForgotPass/></>}/>
         <Route path='/resetpassword/*' element={<><ResetPassword/></>} />
-
+        <Route path='/orders' element={<CardContext><LandNavBar/><Orders/></CardContext>}/>
       </Routes>
     </BrowserRouter>
   </>)

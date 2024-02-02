@@ -12,3 +12,9 @@
     align-items: center;
     margin-bottom: 2rem;
 }
+
+@media(max-width:321px){
+    .homepage{
+        background-color: red;
+    }
+}

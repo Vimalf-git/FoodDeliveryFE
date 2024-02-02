@@ -8,6 +8,7 @@ import ModeIcon from '@mui/icons-material/Mode';
 const Card = ({data,key}) => {
     const {AddTOCart,getCartData,adminOrNot,deleteFood
       , seteditAdminData}=useContext(cardConData)
+      
    useEffect(()=>{getCartData()},[])
   return (
     <div className='cardBox'>
